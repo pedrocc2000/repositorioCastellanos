@@ -1,0 +1,118 @@
+#contenedor-padre {
+    margin: 0;
+}
+#divLogoCompuSystem {
+    margin-left: 15vw;
+}
+#logoCompuSystem {
+    max-width: 15vw;
+}
+#divLogin {
+    margin-right: 100px;
+}
+/*#main-section {
+    margin-top: 24vh;
+    flex-grow: 1;
+    text-align: justify;
+}*/
+#paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#paginacion a {
+    margin: 0 10px;
+}
+#botonAnadirProducto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imagenes-productos {
+    width:12vw;
+}
+.carousel-item img {
+    margin-left: 20px;
+}
+.imagenes-top {
+    margin: auto;
+    top: 0;
+    padding: auto;
+    width: auto;
+    
+}   
+/*nav*/
+.navbar-nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    transition: all 0.5s ease-in-out;
+}
+  
+.navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+  
+.dropdown-menu {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition-duration: 0.1s;
+}
+  
+.dropdown-menu.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/*ICONOS*/
+.list_img {
+    width:1.5vw;
+}
+.fa {
+    color: red;
+    font-size: 3vw;
+}
+.far {
+    font-size: 3vw;
+}
+#botonTramitarPedido {
+    font-size:2vw;
+}
+  @media screen and (max-width: 760px) {
+    img {
+        width:80vw;
+    }
+    .list_img {
+        width:5vw;
+    }
+    #contenedor-productos {
+        text-align: center;
+    }
+    #divLogoCompuSystem {
+        margin-left: 5vw;
+    }
+    #logoCompuSystem {
+        max-width: 30vw;
+    }
+    #main-section {
+        margin-top: 18vh;
+        flex-grow: 1;
+        text-align: justify;
+    }
+    #carouselExampleDark {
+        margin-left: 50px;
+    }
+    .fa {
+        font-size: 15vw;
+    }
+    .far {
+        font-size: 15vw;
+    }
+    #botonTramitarPedido {
+        font-size: 5vw;
+    }
+}

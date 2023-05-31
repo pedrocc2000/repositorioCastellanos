@@ -1,0 +1,166 @@
+body {
+    background-image: url("../../web/imagenes/fondo1.webp");
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    height: 100%;
+}
+
+#pagina {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*CABECERA*/
+#cabecera {
+    background-color: rgb(43, 43, 43);
+    color: #b42b23;
+    width: 100%;
+    height: 15vh;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    top: 0;
+    z-index: 10;
+}
+
+#divCompuSystem {
+    width: 50%;
+}
+
+#divLogin {
+    padding: 5vh;
+    font-size: 20px;
+    color: white;
+}
+
+#logoCompuSystem {
+    width: auto;
+    height: 14vh;
+}
+
+#iconoCompuSystem {
+    font-size: 35px;
+    padding-top: 5vh;
+}
+/*CUERPO NAV Y SECTION*/
+#cuerpo {
+    width: 100%;
+    top: 12vh;
+    bottom: 2.5vh;
+    position: absolute;
+}
+/*MENU*/
+.nav {
+    background: #b42b23;
+    text-align: center;
+    width: 10%;
+    position: fixed;
+    top: 15vh;
+    bottom: 2.5vh;
+}
+.nav_link {
+    color: #304340;
+    display: block;
+    padding: 15px 0;
+    color:#fff;
+    text-decoration: none;
+}
+.nav_link_inside {
+    border-radius: 6px;
+    padding-left: 20px;
+    text-align: left;
+}
+.nav_link_inside:hover {
+    background: #F6F8FA;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    width: 100%;
+    height: 100vh;
+    border-radius: 0 16px 16px 0;
+    background:#b42b23;
+    color:#fff;
+}
+.list_item {
+    margin-top: 40%;
+    list-style: none;
+    padding: 4px 0;
+    text-align: center;
+    overflow: hidden;
+}
+.list_item_click {
+    cursor: pointer;
+}
+.list_button {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    width: 70%;
+    margin: 0 auto;
+}
+.arrow .list_arrow{
+    transform: rotate(90deg);
+}
+.list_arrow {
+    margin-left: auto;
+    transition: transform .3s;
+}
+.list_show {
+    width: 80%;
+    margin-left: auto;
+    border-left: 2px solid black;
+    list-style: none;
+    transition: height .4s;
+    height: 0;
+}
+/*MENU DESPLEGABLE*/
+#cuerpoNav {
+    position: absolute;
+}
+#desplegableMenu {
+    background-color: #b42b23;
+    width: 2vw;
+    height: 3vh;
+    position: fixed;
+    margin-left: 0;
+    left: 22.5vh;
+    top: 50vh;
+    z-index: 50;
+}
+/*SECTION*/
+#section {
+    background-color: rgb(241, 232, 232);
+    height: auto;
+    margin-top: 35vh;
+    flex: 1;
+    overflow: auto;
+}
+
+/*FOOTER*/
+#footer {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(43, 43, 43);
+    color: white;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+}
+
+/*OTROS*/
+a {
+    color: black;
+}
+
+a:hover {
+    background-color: rgb(148, 46, 46);
+}
+
+#enlaceLogin {
+    color: white;
+}

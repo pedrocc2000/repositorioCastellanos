@@ -1,0 +1,17 @@
+#contenedor-padre {
+    margin: 0;
+}
+#divLogoCompuSystem {
+    margin-left: 100px;
+}
+#logoCompuSystem {
+    max-width: 15vw;
+}
+#divLogin {
+    margin-right: 100px;
+}
+#main-section {
+    margin-top: 20vh;
+    flex-grow: 1;
+    text-align: justify;
+}

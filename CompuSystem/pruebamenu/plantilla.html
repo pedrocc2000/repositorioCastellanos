@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Titillium+Web:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>CompuSystem</title>
+</head>
+
+<body>
+    <div id="pagina">
+        <header id="cabecera">
+            <div id="divCompuSystem">
+                <img src="web/imagenes/logo_compusystem.png" class="rounded mx-auto d-block" alt="">
+            </div>
+            <div id="divLogin">
+                <?php
+                if (isset($_SESSION['usuario'])) {
+                ?>
+                    <h3>Bienvenido <?= print($_SESSION['usuario']); ?></h3>
+                    <a href="index.php?action=logout">Cerrar sesion</a>
+                <?php
+                } else {
+                ?>
+                    <form action="index.php?action=login" method="post">
+                        <input type="text" name="usuario" placeholder="usuario"><br>
+                        <input type="password" name="password" placeholder="contraseña"><br>
+                        <input type="submit" value="Iniciar sesion">
+                    </form>
+                    <a id="enlaceLogin" href="index.php?action=registrar">Registarse</a>
+                <?php
+                }
+                ?>
+            </div>
+        </header>
+        <div id="cuerpo">
+            <div id="cuerpoNav">
+                <div>
+                    <nav class="nav">
+                        <ul class="list">
+                            <li class="list_item">
+                                <div class="list_button">
+                                    <img src="web/imagenes/svg/heart-regular.svg" class="list_img">
+                                    <a href="#" class="nav_link">Home</a>
+                                </div>
+                            </li>
+                            <li class="list_item list_item_click">
+                                <div class="list_button list_button_click">
+                                    <img src="web/imagenes/svg/servicios.svg" alt="" class="list_img">
+                                    <a href="#" class="nav_link">Servicios</a>
+                                    <img src="web/imagenes/svg/flechaDerecha.svg" alt="" class="list_arrow">
+                                </div>
+                                <ul class="list_show">
+                                    <li class="list_inside">
+                                        <a href="#" class="nav_link nav_link_inside">VPN</a>
+                                    </li>
+                                    <li class="list_inside">
+                                        <a href="#" class="nav_link nav_link_inside">Firewall</a>
+                                    </li>
+                                    <li class="list_inside">
+                                        <a href="#" class="nav_link nav_link_inside">Call center</a>
+                                    </li>
+                                    <li class="list_inside">
+                                        <a href="#" class="nav_link nav_link_inside">Red mesh</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="list_item list_item_click">
+                                <div class="list_button list_button_click">
+                                    <img src="web/imagenes/svg/fibraOptica.svg" alt="" class="list_img">
+                                    <a href="#" class="nav_link">Fibra óptica</a>
+                                    <img src="web/imagenes/svg/flechaDerecha.svg" alt="" class="list_arrow">
+                                </div>
+                                <ul class="list_show">
+                                    <li class="list_inside">
+                                        <a href="#" class="nav_link nav_link_inside">Tarifa estudiantes</a>
+                                    </li>
+                                    <li class="list_inside">
+                                        <a href="#" class="nav_link nav_link_inside">Tarifa empresas</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="list_item">
+                                <div class="list_button">
+                                    <img src="web/imagenes/svg/movil.svg" class="list_img">
+                                    <a href="#" class="nav_link">Tarifas móviles</a>
+                                </div>
+                            </li>
+                            <li class="list_item">
+                                <div class="list_button">
+                                    <img src="web/imagenes/svg/tienda.svg" class="list_img">
+                                    <a href="#" class="nav_link">Tienda</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="desplegableMenu">
+                    <img src="web/imagenes/svg/flechaDerecha.svg">
+                    <a href="#"></a>
+                </div>
+            </div>
+            <section>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat ipsam ea doloribus dolores perspiciatis? Hic saepe delectus, dolorem quo nam minus. Quos vel voluptas et perferendis neque asperiores voluptate quibusdam.</p>
+                <?php
+                //Imprimimos la vista de las páginas
+                print $vista;
+                ?>
+            </section>
+        </div>
+        <footer id="footer">
+            <div>
+                <p>Dirección: C/Castillo Nº28 Tomelloso 28000</p>
+            </div>
+            <div>
+                <p>Horarios:
+                    Lunes a viernes: de 9:00 a 17:00h.
+                    Sábado y domingo: de 11:00 a 15:00h.
+                </p>
+            </div>
+            <div>
+                <p><a href="contacto.html" id="contacto">Contáctanos</a></p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        let list_elements = document.querySelectorAll('.list_button_click');
+        list_elements.forEach(list_element => {
+            list_element.addEventListener('click', () => {
+                list_element.classList.toggle('arrow');
+                let height = 0;
+                //Toma al hermano adyacente
+                let menu = list_element.nextElementSibling;
+                if (menu.clientHeight == '0') {
+                    height = menu.scrollHeight;
+                }
+                menu.style.height = height + "px";
+            });
+        });
+    </script>
+</body>
+
+</html>
