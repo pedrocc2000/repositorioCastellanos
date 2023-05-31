@@ -100,6 +100,8 @@
                   <li><a class="dropdown-item" href="index.php?action=ver_enlace&enlace=paginas/quienessomos.php">Quienes somos</a></li>
                   <li><a class="dropdown-item" href="index.php?action=ver_enlace&enlace=paginas/contacto.php">Contacto</a></li>
                   <li><a class="dropdown-item" href="index.php?action=ver_enlace&enlace=paginas/faqs.php">FAQ's</a></li>
+                  <li><a class="dropdown-item" href="index.php?action=ver_enlace&enlace=paginas/sobreMi.php">Sobre mi</a></li>
+                  <li><a class="dropdown-item" href="index.php?action=ver_enlace&enlace=paginas/miCurriculum.php">Mi curriculum</a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown flex-fill">
